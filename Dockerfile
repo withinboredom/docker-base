@@ -6,7 +6,7 @@ MAINTAINER Scott Mebberson <scott@scottmebberson.com>
 RUN export DEBIAN_FRONTEND=noninteractive && \
     apt-get update && \
     apt-get upgrade -y && \
-    apt-get install -y build-essential software-properties-common curl rsync dnsutils unzip && \
+    apt-get install -y build-essential software-properties-common curl rsync dnsutils unzip inotify-tools && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
