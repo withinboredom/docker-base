@@ -27,7 +27,7 @@ _**Aren't you only supposed to run one process per container?**_ Well yes and no
 Usage
 -----
 
-To use this image include `FROM smebberson/ubuntu-base` at the top of your `Dockerfile`. Inheriting from `smebberson/ubuntu-base` provides you with the ability to easily start any service using [s6][s6]. s6 will also keep it running for you, restarting it when it crashes.
+To use this image include `FROM withinboredom/ubuntu-base` at the top of your `Dockerfile`. Inheriting from `withinboredom/ubuntu-base` provides you with the ability to easily start any service using [s6][s6]. s6 will also keep it running for you, restarting it when it crashes.
 
 To start your service using s6:
 
