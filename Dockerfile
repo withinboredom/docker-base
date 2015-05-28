@@ -1,7 +1,7 @@
 # DOCKER-VERSION 1.0.0
 
 FROM ubuntu:14.04
-MAINTAINER Scott Mebberson <scott@scottmebberson.com>
+MAINTAINER Rob Landers <landers.robert@gmail.com>
 
 RUN export DEBIAN_FRONTEND=noninteractive && \
     apt-get update && \
@@ -12,5 +12,5 @@ RUN export DEBIAN_FRONTEND=noninteractive && \
 
 ADD root /
 
-ENTRYPOINT ["/usr/bin/s6-svscan","/etc/s6"]
+ENTRYPOINT ["/package/admin/s6-2.1.3.0/command/s6-svscan","/etc/s6"]
 CMD []
