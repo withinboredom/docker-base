@@ -10,6 +10,10 @@ RUN export DEBIAN_FRONTEND=noninteractive && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
+ENV PATH /package/admin/s6-2.1.3.0/command:$PATH
+
+RUN touch /etc/leapsecs.dat
+
 ADD root /
 
 ENTRYPOINT ["/package/admin/s6-2.1.3.0/command/s6-svscan","/etc/s6"]
