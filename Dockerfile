@@ -6,9 +6,16 @@ MAINTAINER Rob Landers <landers.robert@gmail.com>
 RUN export DEBIAN_FRONTEND=noninteractive && \
     apt-get update && \
     apt-get upgrade -y && \
-    apt-get install -y build-essential software-properties-common curl rsync dnsutils unzip inotify-tools && \
+    apt-get install -y build-essential software-properties-common curl rsync dnsutils unzip inotify-tools python python-pip && \
+    apt-get purge -y python-pip python-requests && \
     apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
+    rm -rf /var/lib/apt/lists/* && \
+    curl -sSLO https://bootstrap.pypa.io/get-pip.py && \
+    python get-pip.py && \
+    rm get-pip.py && \
+    pip install consulate && \
+    pip install --upgrade requests
+
 
 ENV PATH /package/admin/s6-2.1.3.0/command:$PATH
 
