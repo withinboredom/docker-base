@@ -6,7 +6,7 @@ MAINTAINER Rob Landers <landers.robert@gmail.com>
 RUN export DEBIAN_FRONTEND=noninteractive && \
     apt-get update && \
     apt-get upgrade -y && \
-    apt-get install -y build-essential software-properties-common curl rsync dnsutils unzip inotify-tools python python-pip && \
+    apt-get install -y wget build-essential software-properties-common curl rsync dnsutils unzip inotify-tools python python-pip && \
     apt-get purge -y python-pip python-requests && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* && \
