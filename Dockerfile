@@ -18,6 +18,7 @@ RUN export DEBIAN_FRONTEND=noninteractive && \
 
 
 ENV PATH /package/admin/s6-2.1.3.0/command:$PATH
+ENV GOMAXPROCS 100
 
 RUN touch /etc/leapsecs.dat
 
